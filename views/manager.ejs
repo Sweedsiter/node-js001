@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+
+<body class="container">
+
+<header>
+  <%- include('./header'); %>
+</header>
+<link href="/css/manager.css" rel="stylesheet" type="text/css">
+<main class="manager">
+
+   <div class="Lchange">
+        <a href='/logout'>log out</a>  
+        <a href="/addform">เพิ่มข้อมูล</a>
+        <a href="/">หน้าแรก</a>
+    </div>
+ 
+
+<table cellpadding="0" cellspacing="0" border="0">
+
+  <div class="tbl-header">
+   <thead>
+    <tr >
+      <th><h3>รูป</h3></th>
+      <th><h3>ซื้อ</h3></th>
+      <th><h3>ราคา</h3></th>
+      <th><h3>ข้อมูล</h3></th> 
+      <th><h3>ลบข้อมูล</h3></th>
+      <th><h3>แก้ไข</h3></th>  
+    </tr>
+   </thead>
+  </div>
+
+  <% products.forEach(function(products) { %>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td><img src="/images/products/<%= products.image %>"/></td>
+          <td><%= products.name %></td>
+          <td><%= products.price %></td>
+          <td><a href="/product/<%= products._id %>">ดูข้อมูล</a></td>
+          <th><i class="fa-solid fa-trash"><a href="/delet/<%= products._id %>">ลบออก</a></i></th>
+          <th><i class="fa-regular fa-pen-to-square"><a href="/update/<%= products._id %>">แก้ไข</a></i></th>  
+        </tr>        
+      </tbody>
+  </div>
+  <% }); %>
+
+</table>
+</main>
+
+<footer>
+  <%- include('./footer'); %>
+</footer>
+</nav>
+</body>
+</html>

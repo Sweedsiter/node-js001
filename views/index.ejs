@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+
+<body class="container">
+
+<header>
+  <%- include('./header'); %>
+</header>
+<link href="/css/index.css" rel="stylesheet" type="text/css">
+<main>
+  <div class="jumbotron main">  
+    <p id="displayValue"></p> 
+    <div class="items">
+      <% products.forEach(function(products) { %>
+        <form class='addmin' method="get" action="/product/<%= products._id %>">
+        <div class='item'  >         
+          <img src="/images/products/<%= products.image %>" >
+          <div class="name"><p>ชื่อ  :<%= products.name %></p><p><%= products.price %>-.</p> </div>       
+           <button type="submit" >เพิ่มเติม</button>
+           </div>          
+          </form>
+      <% }); %>
+      </div>
+ 
+  </div>
+</main>
+
+<footer>
+  <%- include('./footer'); %>
+</footer>
+</nav>
+</body>
+</html>

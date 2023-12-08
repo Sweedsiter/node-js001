@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+<body class="container">
+<header>
+  <%- include('./header'); %>
+</header>
+<link href="/css/addform.css" rel="stylesheet" type="text/css">
+<main>
+    <form class='addform' method="post" action="/cread" enctype="multipart/form-data">
+      <div>
+        <i class="fa-brands fa-galactic-senate"></i>
+        <input type="text" placeholder="file-Name" name='fileName'  class="filename">
+      </div>
+      <div>
+        <i class="fa-solid fa-layer-group"></i>
+        <input type="text" placeholder="Group" name='group'  class="group">
+      </div>
+      <div>
+        <i class="fa-regular fa-image"></i>
+        <input type="file"   name='image'  class="image">ไฟล์รูป</input>
+      </div>
+      <div>
+        <i class="fa-regular fa-money-bill-1"></i>
+        <input type="number" placeholder="price" name='price'  class="price" >
+      </div>
+      <div>
+        <i class="fa-solid fa-message"></i>
+        <textarea id="textarea" name="tital" rows="auto" cols="auto">กรุณาใส่ข้อมูลเกี่ยวกับไฟล์</textarea>
+      </div>
+      <div>
+        <i class="fa-solid fa-file"></i> 
+        <input type="url" placeholder="urllogo" name='urllogo'  class="urlLogo">
+      </div>
+      <div class='submits'>
+        <button type="submit">Send</button> 
+      </div> 
+      <a href="/">หน้าแรก</a>   
+        
+   </form>
+</main>
+<footer>
+  <%- include('./footer'); %>
+</footer>
+</nav>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+
+<body class="container">
+
+<header>
+  <%- include('./header'); %>
+</header>
+<link href="/css/login.css" rel="stylesheet" type="text/css">
+<main>
+  <form class="login" method="post" action="/login" >
+    <div class='til'>
+      <h1>LOGIN</h1>
+      <p>กรุณาเข้าสูระบบด้วย ชื่อและรหัสที่ ได้มาจาก ACC Programer</p>
+    </div>
+    <div>
+      <i class="login__icon fas fa-user "></i>
+      <input type="text" placeholder="Username" name='username'  class="userName">
+    </div>
+    <div>
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" placeholder="password" name='password' class="password">
+    </div>
+    
+    <button type="submit">Login</button>  
+
+  </form> 
+</main>
+
+<footer>
+  <%- include('./footer'); %>
+</footer>
+</nav>
+</body>
+</html>

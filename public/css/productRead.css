@@ -1,0 +1,64 @@
+.productRead {
+  width: 100%;
+}
+.productRead .item-one {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0rem;
+}
+.productRead .item-one img {
+  width: 50%;
+}
+.productRead .item-one .name {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  align-self: center;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.productRead .item-one .tital {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 20px 0px;
+  align-items: center;
+}
+.productRead .item-one button {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  transition: 0.4s;
+  margin: 2rem 0rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.productRead .item-one button a {
+  display: flex;
+  justify-content: center;
+  color: black;
+  transition: 0.2s;
+  width: 100px;
+}
+.productRead .item-one button a:hover {
+  display: flex;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 16px;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .productRead .item-one img {
+    width: 70%;
+  }
+}

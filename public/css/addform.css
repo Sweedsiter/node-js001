@@ -1,0 +1,52 @@
+.addform {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0rem;
+  align-self: center;
+}
+.addform > div {
+  width: 50%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  margin: 0.6rem;
+}
+.addform > div i {
+  padding-right: 1rem;
+}
+.addform > div input {
+  left: 0;
+}
+.addform > .submits {
+  display: flex;
+  justify-content: center;
+}
+.addform > .submits button {
+  margin: 4rem 1rem;
+  background: none;
+  padding: 4px 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.addform > .submits button:hover {
+  background-color: black;
+  border: bone;
+  font-size: large;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .addform {
+    flex-wrap: wrap;
+  }
+  .addform > div {
+    width: 250px;
+    justify-content: space-between;
+    margin-left: -2rem;
+  }
+}

@@ -1,0 +1,33 @@
+.manager {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.manager table {
+  width: 100%;
+  table-layout: fixed;
+}
+.manager table a {
+  color: black;
+  padding-left: 8px;
+}
+.tbl-content {
+  height: fit-content;
+  overflow-x: auto;
+}
+
+.manager > table img {
+  height: 80px;
+}
+/* Link change bar page */
+.manager .Lchange {
+  width: 100%;
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid black;
+}
+.manager .Lchange > * {
+  padding-right: 1rem;
+  font-size: 1.4rem;
+}
