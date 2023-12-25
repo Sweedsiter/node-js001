@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+<body class="container">
+<header>
+  <%- include('./header'); %>
+</header>
+<link href="/css/addform.css" rel="stylesheet" type="text/css">
+<main>
+
+    <form class='addform' method="post" action="/updateItem/<%= products._id %>"  >
+      <h2>แก้ไขข้อมูล</h2>
+      <br/>
+      <div>
+        <i class="fa-brands fa-galactic-senate">ชื่อ</i>
+        <input type="text"  name='fileName'  class="filename" value="<%= products.name %>">
+      </div>
+      <div>
+        <i class="fa-solid fa-layer-group">กลุ่ม</i>
+        <input type="text"  name='group'  class="group" value="<%= products.group %>">
+      </div>
+ 
+      <div>
+        <i class="fa-regular fa-money-bill-1">ราคา</i>
+        <input type="number" name='price'  class="price" value="<%= products.price %>" >
+      </div>
+      <div>
+        <i class="fa-solid fa-message">เกี่ยวกับ</i>
+        <textarea id="textarea" name="tital" rows="auto" cols="auto" value="<%= products.tital %>"></textarea>
+      </div>
+      <div>
+        <i class="fa-solid fa-file">ลิงค์โหลด</i> 
+        <input type="url" name='lkurl'  value="<%= products.lkurl %>">
+      </div>
+      <div class='submits'>  
+        <input type="hidden" name='id'   value="<%= products._id %>" > 
+        <button type="submit">Update</button>      
+      </div> 
+      <a href="/">หน้าแรก</a>   
+        
+   </form>
+</main>
+<footer>
+  <%- include('./footer'); %>
+</footer>
+</nav>
+</body>
+</html>

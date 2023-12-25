@@ -13,11 +13,14 @@
 <main>
   <link href="/css/productRead.css" rel="stylesheet" type="text/css">
   <div class="productRead">
-    <div class='item-one'  >         
+    <div class='item-one'  >  
+
       <img src="/images/products/<%= products.image %>" alt="Dx-emb">
       <div class="name"><p>ชื่อ  :<%= products.name %></p><p>ราคา :<%= products.price %>-.</p> </div>   
       <div class='tital'><h5>รายละเอียด :</h5> <%= products.tital %></div>    
-       <button type="submit" src=" <%= products.lkurl %>"><a href="<%= products.lkurl %>" target="_blank">Download</p></button>
+      <i class="fa-regular fa-pen-to-square"><a href="/edit/<%= products._id %>">แก้ไข</a></i> 
+       <button type="submit" ><a href="<%= products.lkurl %>" target="_blank">Download</p></button>
+   
         <a href="/">หน้าแรก</a>
        </div>  
   </div>

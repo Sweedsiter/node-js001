@@ -55,7 +55,51 @@ exports.cread = async function (req, res) {
     });
   res.redirect("/manager");
 };
+// Update one
+exports.EditItem = async function (req, res) {
+  const id = req.params.id;
+  const products = await DBproduct.findOne({ _id: id }).exec();
 
+  if (req.session.login) {
+    res.render("editItem", {
+      products: products,
+    });
+  } else {
+    res.redirect("/login");
+  }
+  console.log(products._id + "แก้ไข");
+};
+exports.update = async function (req, res) {
+  const id = req.body.id;
+  await DBproduct.findOneAndUpdate(
+    { _id: id },
+    {
+      name: req.body.fileName,
+      price: req.body.price,
+      group: req.body.group,
+      tital: req.body.tital,
+      lkurl: req.body.lkurl,
+    },
+  );
+  console.log(req.body);
+  res.redirect("/manager");
+};
+// delet
+exports.delet = async function (req, res) {
+  const id = req.params.id;
+  // ลบรูปใน Database
+  const productimg = await DBproduct.findOne({ _id: id }).exec();
+  const imgdelet = await productimg.image;
+  const fs = require("fs");
+  fs.unlink(`public/images/products/${imgdelet}`, function (err) {
+    if (err) throw err + "รูปจาก Fs";
+    console.log("File deleted!");
+  });
+  // ลบ Document MongopDB
+  const products = await DBproduct.deleteOne({ _id: id });
+  console.log(products);
+  res.redirect("/");
+};
 // login form
 exports.addmin = function (req, res) {
   res.render("Login");

@@ -13,11 +13,10 @@
 <main class="manager">
 
    <div class="Lchange">
-        <a href='/logout'>log out</a>  
+        <a href='/logout'>ออกจากระบบ</a>  
         <a href="/addform">เพิ่มข้อมูล</a>
         <a href="/">หน้าแรก</a>
     </div>
- 
 
 <table cellpadding="0" cellspacing="0" border="0">
 
@@ -44,13 +43,15 @@
           <td><%= products.price %></td>
           <td><a href="/product/<%= products._id %>">ดูข้อมูล</a></td>
           <th><i class="fa-solid fa-trash"><a href="/delet/<%= products._id %>">ลบออก</a></i></th>
-          <th><i class="fa-regular fa-pen-to-square"><a href="/update/<%= products._id %>">แก้ไข</a></i></th>  
-        </tr>        
+          <th><i class="fa-regular fa-pen-to-square"><a href="/edit/<%= products._id %>">แก้ไข</a></i></th>  
+        </tr>  
+      
       </tbody>
   </div>
   <% }); %>
 
 </table>
+
 </main>
 
 <footer>

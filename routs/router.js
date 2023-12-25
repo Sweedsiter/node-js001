@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const DBproduct = require("../Models/Product");
+const rigit = require("../Models/regit");
 const {
   list,
   read,
@@ -11,21 +12,23 @@ const {
   manager,
   addform,
   cread,
+  delet,
+  EditItem,
+  update,
 } = require("../Controllers/ProductController");
+const regit = require("../Models/regit");
 
+// Group
 DBproduct.aggregate([
   {
     $group: {
       _id: { group: "$group" },
+      count: { $sum: 1 },
     },
   },
 ])
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+  .then()
+  .catch();
 
 // Multer upload Images
 const storage = multer.diskStorage({
@@ -55,5 +58,14 @@ router.get("/logout", logout);
 router.get("/addform", addform);
 //Create one
 router.post("/cread", upload.single("image"), cread);
+router.get("/delet/:id", delet);
+router.get("/edit/:id", EditItem);
+router.post("/updateItem/:id", update);
+router.get("/regit", async (req, res) => {
+  // const products = await regit.find({}).exec();
+  const products = await DBproduct.find({}).exec();
+  const tt = products.map((e) => e.group);
+  res.json(tt);
+});
 
 module.exports = router;

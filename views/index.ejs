@@ -7,12 +7,14 @@
 <body class="container">
 
 <header>
+
   <%- include('./header'); %>
 </header>
 <link href="/css/index.css" rel="stylesheet" type="text/css">
 <main>
   <div class="jumbotron main">  
     <p id="displayValue"></p> 
+
     <div class="items">
       <% products.forEach(function(products) { %>
         <form class='addmin' method="get" action="/product/<%= products._id %>">
@@ -33,4 +35,5 @@
 </footer>
 </nav>
 </body>
+<script src="/client.js"></script> 
 </html>

@@ -3,4 +3,3 @@ function client() {
   document.getElementById("displayValue").innerText =
     "ข้อมูลที่ค้นหา: " + inputValue;
 }
-
