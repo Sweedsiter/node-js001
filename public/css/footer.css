@@ -1,0 +1,36 @@
+.my-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0rem;
+  float: left;
+  border-top: 1px solid black;
+}
+.my-footer .footers > div {
+  width: 25%;
+  float: left;
+  padding: 1rem 2rem 2rem 2rem;
+  margin-bottom: 1rem;
+}
+.my-footer .footers > div li {
+  list-style: none;
+}
+.my-footer .footers > div li a {
+  color: black;
+}
+.my-footer .footers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 0rem;
+}
+@media screen and (max-width: 600px) {
+  .my-footer .footers > div {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+}

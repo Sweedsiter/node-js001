@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  margin-bottom: 2rem;
 }
 .manager table {
   width: 100%;
