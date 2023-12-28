@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const DBproduct = require("../Models/Product");
-const rigit = require("../Models/regit");
+// const rigit = require("../Models/regit");
 const {
   list,
   read,
@@ -18,16 +18,16 @@ const {
 } = require("../Controllers/ProductController");
 
 // Group
-DBproduct.aggregate([
-  {
-    $group: {
-      _id: { group: "$group" },
-      count: { $sum: 1 },
-    },
-  },
-])
-  .then()
-  .catch();
+// DBproduct.aggregate([
+//   {
+//     $group: {
+//       _id: { group: "$group" },
+//       count: { $sum: 1 },
+//     },
+//   },
+// ])
+//   .then()
+//   .catch();
 
 // Multer upload Images
 const storage = multer.diskStorage({
