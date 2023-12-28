@@ -16,7 +16,6 @@ const {
   EditItem,
   update,
 } = require("../Controllers/ProductController");
-const regit = require("../Models/regit");
 
 // Group
 DBproduct.aggregate([
